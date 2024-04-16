@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html{
+        @apply scroll-smooth
+    }
+    body{
+        @apply text-white bg-primaryCol tracking-wider font-dmsans dark:bg-black
+
+    }
+
+    section{
+        @apply pt-16 pb-4 md:pt-20
+    }
+    footer{
+        @apply pt-16 pb-4 md:pt-20
+    }
+}
+
+@layer components{
+    
+    .btn{
+        @apply inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer rounded-md ease-linear duration-200
+    }
+    .btn-primary{
+        @apply text-black bg-secondaryColor hover:opacity-75
+    }
+}
+
+
+@layer utilities{
+    .home_font,
+    .card-title{
+        @apply text-4xl font-oswald font-bold uppercase lg:text-6xl
+    }
+    .card-title{
+        @apply text-xl
+    }
+
+    .separator{
+        @apply w-28 bg-secondaryColor h-[2px]  my-5
+    }
+
+    .paragraph{
+        @apply text-xs text-paragraphColor leading-5
+    }
+}
+
+.tabs-wrap ul li:hover,
+.tabs-wrap ul li.active {
+    @apply bg-secondaryColor text-black
+}
+
